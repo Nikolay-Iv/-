@@ -1,0 +1,70 @@
+html{
+    box-sizing: border-box;
+}
+*, 
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+
+
+ul,
+li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    font-family: 'HelveticaNeue', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #474747;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin: 0;
+    padding: 0;
+    font-family: 'HelveticaNeue', sans-serif;
+    font-weight: 400;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+}
