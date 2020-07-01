@@ -1,8 +1,15 @@
 $(function(){
 
     
-       $('.phone').inputmask('+7 (999) 999-99-99'); 
+    $('.phone').inputmask('+7 (999) 999-99-99'); 
     
+    $('.header__link').on('click', function(){
+        $('.modal').fadeIn()
+    });
+
+    $('.modal__close').on('click', function(){
+        $('.modal').fadeOut();
+    });
     
     
 

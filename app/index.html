@@ -17,7 +17,7 @@
                                 <a class="logo" href="#">
                                     СтройМеталлПоставка
                                 </a>
-                                <a class="header__link" href="#send">
+                                <a class="header__link"  href="#">
                                     Обратный звонок
                                 </a>
                                 <div class="header__info">
@@ -175,19 +175,19 @@
                             </div>     
                         </div>
                     </section>
-                    <section class="form" id="send">
+                    <section class="form">
                         <div class="container">
                             <form class="form__box" action="">
                                 
                                 <!-- Hidden Required Fields -->
 		                        <input type="hidden" name="project_name" value="stroymetallpostavka">
-		                        <input type="hidden" name="admin_email" value="euo79092@eoopy.com">
+		                        <input type="hidden" name="admin_email" value="kolyan41k01@yandex.ru">
 		                        <input type="hidden" name="form_subject" value="footer form">
                                 <!-- END Hidden Required Fields -->
                                 
                                 <label class="form__box-label">Оставить заявку <span>Мы ответим на ваши вопросы</span></label>
-                                <input class="form__box-input" name="Имя" type="text" placeholder="Ваше имя">
-                                <input class="form__box-input phone" name="Телефон" type="tel" placeholder="Номер телефона">
+                                <input class="form__box-input" name="Имя" type="text" placeholder="Ваше имя" required>
+                                <input class="form__box-input phone" name="Телефон" type="tel" placeholder="Номер телефона" required>
                                 <input class="form__box-input" name="Email" type="email" placeholder="Адрес. эл.почты">
                                 <button class="form__box-btn">Отправить заявку</button>
                             </form>
@@ -213,9 +213,21 @@
                         </div>
                     </div>
                 </footer>
-                
             </div>
-
+            <div class="modal">
+                <div class="modal__wrapper">
+                    <div class="modal__title">
+                        Обратный звонок
+                    </div>
+                    <form class="modal__form">
+                        <input class="modal__form-input" name="Имя" type="text" placeholder="Ваше имя" required>
+                        <input class="modal__form-input phone" name="Телефон" type="tel" placeholder="Номер телефона" required>
+                        <input class="modal__form-input" name="Email" type="email" placeholder="Адрес. эл.почты">
+                        <button class="modal__form-btn">Отправить заявку</button>
+                    </form>
+                    <div class="modal__close"></div>
+                </div>
+            </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
