@@ -1,6 +1,5 @@
 $(function(){
 
-    
     $('.phone').inputmask('+7 (999) 999-99-99'); 
     
     $('.header__link').on('click', function(){
@@ -10,26 +9,36 @@ $(function(){
     $('.modal__close').on('click', function(){
         $('.modal').fadeOut();
     });
-    
+
     
 
         //E-mail Ajax Send
         $("form").submit(function() { //Change
-            var th = $(this);
             $.ajax({
                 type: "POST",
                 url: "mail.php", //Change
-                data: th.serialize()
+                data: $(this).serialize()
             }).done(function() {
-                alert("Thank you!");
+                /* alert("Thank you!"); */
+                $(this).find('input').val('');
+                $(this).trigger('reset');
+                $('.js-overlay-thank-you').fadeIn();
                 setTimeout(function() {
                     // Done Functions
-                    th.trigger("reset");
+                    $(this).trigger("reset");
                 }, 1000);
             });
             return false;
         });
     
-    
-
+        $('.js-close-thank-you').click(function() { // по клику на крестик
+            $('.js-overlay-thank-you').fadeOut();
+        });
+        
+        $(document).mouseup(function (e) { // по клику вне попапа
+            var popup = $('.popup');
+            if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+                $('.js-overlay-thank-you').fadeOut();
+            }
+        });
 });
